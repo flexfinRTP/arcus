@@ -78,11 +78,11 @@ export default function Bridge() {
       <main className={styles.main}>
     
       
-        <Text fontSize="xl" fontWeight="semibold" color="">
+        <Text fontSize="xl" py={10} fontWeight="" color="">
           Ready to go? Put your BTC to work <span><Link href="/btcreserve" fontWeight="extrabold" color="#F2A900">now!</Link></span>
         </Text>
         
-        <br />       <br />
+      
         <br />
         <br />
         <Text fontSize="3xl" fontWeight="bold" color="#F2A900">
@@ -104,7 +104,7 @@ export default function Bridge() {
           <Text fontSize="2xl" fontWeight="semibold" color="#F2A900">
             Use the ALEX Bridge Now
           </Text>
-          <Text fontSize="" fontWeight="semibold" color="#828282">
+          <Text as='i' fontSize="" fontWeight="semibold" color="#828282">
             testnet whitelist only...
           </Text>
 

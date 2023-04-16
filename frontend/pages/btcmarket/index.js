@@ -97,19 +97,19 @@ export default function Market() {
 
       <main className={styles.main}>
         <br />
-        <Text fontSize="4xl" fontWeight="semibold" color="#F2A900">
+        <Text fontSize="4xl" py={10} fontWeight="bold" color="#F2A900">
           Invest your Reserve BTC into your preferred trading strategy.
         </Text>
-        <Text fontSize="2xl" fontWeight="" color="">
-          Put your BTC to work...
+        <Text fontSize="xl" as='i' fontWeight="semibold" color="">
+          Put your BTC to work in a highly profitable Arcus Vault...
         </Text>
         {/* <br />
         <br />
         <ContractCallarcuslend /> */}
-        <br />
+        <br /><br />
         <br />
         <Container centerContent>
-          <Text fontSize="3xl" fontWeight="bold" color="#F2A900">
+          <Text as='u' fontSize="3xl" fontWeight="bold" color="">
             Vaults
           </Text>
           <br />
@@ -134,6 +134,7 @@ export default function Market() {
           </Container>
           <Container centerContent>
             <Text
+              as="i"
               textAlign="center"
               fontSize="2xl"
               fontWeight="bold"
@@ -166,6 +167,7 @@ export default function Market() {
           </Container>
           <Container centerContent>
             <Text
+              as="i"
               textAlign="center"
               fontSize="2xl"
               fontWeight="bold"
@@ -199,6 +201,7 @@ export default function Market() {
           </Container>
           <Container centerContent>
             <Text
+              as="i"
               textAlign="center"
               fontSize="2xl"
               fontWeight="bold"
@@ -231,6 +234,7 @@ export default function Market() {
           </Container>
           <Container centerContent>
             <Text
+              as="i"
               textAlign="center"
               fontSize="2xl"
               fontWeight="bold"

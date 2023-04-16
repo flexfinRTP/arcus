@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import Navbar from "../components/NavBar"
+import Footer from "../components/Footer"
 
 import { Connect } from "@stacks/connect-react";
 
@@ -30,6 +31,7 @@ function MyApp({ Component, pageProps }) {
       <ChakraProvider>
         <Navbar />
         <Component {...pageProps} />
+        {/* <Footer /> */}
       </ChakraProvider>
     </Connect>
   );

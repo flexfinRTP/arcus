@@ -6,8 +6,16 @@ import styles from "../styles/Home.module.css";
 import ContractCallarcuslend from "../components/ContractCallarcuslend";
 import ContractCallarcusbal from "../components/ContractCallarcusbal";
 import { useConnect } from "@stacks/connect-react";
-import { Button, ButtonGroup, Container, Stack, Text } from "@chakra-ui/react";
+import {
+  Button,
+  ButtonGroup,
+  Container,
+  Image,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import { useRouter } from "next/router";
+import Arcus from "../public/Arcus_logo.png";
 
 import { StacksTestnet } from "@stacks/network";
 
@@ -69,7 +77,7 @@ export default function Home() {
   }
 
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>Arcus</title>
         <meta name="description" content="Arcus - BTC Vault" />
@@ -80,12 +88,13 @@ export default function Home() {
 
       <main className={styles.main}>
         <br />
-        <Text fontSize="4xl" fontWeight="extrabold" color="#F2A900">
+        <Text fontSize="4xl" py={16} fontWeight="extrabold" color="#F2A900">
           Welcome to Arcus.
         </Text>
+        {/* <Image src={Arcus} alt="logo" width={200} height={200} /> */}
         <Text fontSize="xl" fontWeight="semibold" color="">
           Unlock the full potential of your{" "}
-          <Text as="span"  fontWeight="bold" color="#F2A900">
+          <Text as="span" fontWeight="bold" color="#F2A900">
             BTC
           </Text>{" "}
           holdings with our dynamic investment platform.
@@ -96,9 +105,9 @@ export default function Home() {
           <Text as="span" fontWeight="bold" font color="#F2A900">
             DAILY
           </Text>{" "}
-          rewards in BTC
+          rewards in BTC!
         </Text>
-        <br /> <br /> <br />
+        <br /> <br /> 
         <Stack
           direction={"row"}
           spacing={24}

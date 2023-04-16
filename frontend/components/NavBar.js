@@ -7,6 +7,7 @@ import {
   HStack,
   Link,
   IconButton,
+  Image,
   Button,
   Menu,
   MenuButton,
@@ -21,6 +22,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import ConnectWallet from "../components/ConnectWallet";
 import { useRouter } from "next/router";
+import Arcus from "../public/Arcus_logo.png";
 
 const Links = ["Home", "Lend/Borrow", "Team", "Docs"];
 
@@ -50,24 +52,31 @@ export default function Simple() {
           <Stack
             direction={"row"}
             spacing={24}
-            py={2}
-            px={16}
+            py={10}
             display="flex"
             alignItems="center"
           >
-                          <Text fontSize="4xl" pr={6}           onClick={() => router.push("/")}>[Arcus]</Text>
-            <Flex h={12} alignItems={"center"} justifyContent={"space-between"}>
-              {/* <Link
-					href="/"
-				  >
-					<Image src={} alt="logo" width={60} height={60} />
-				  </Link> */}
-            </Flex>
+            {/* <Image
+              src={Arcus}
+              alt="logo"
+              py={20}
+              width={200}
+              height={200}
+              onClick={() => router.push("/")}
+            /> */}
             <Menu>
-              <Link fontSize="lg" href="/">Home</Link>
-              <Link fontSize="lg" href="/bridge">Bridge</Link>
-              <Link fontSize="lg" textAlign={"center"} href="/btcreserve">BTC Reserve</Link>
-              <Link fontSize="lg" href="/btcmarket">Invest</Link>
+              <Link fontSize="lg" href="/">
+                Home
+              </Link>
+              <Link fontSize="lg" href="/bridge">
+                Bridge
+              </Link>
+              <Link fontSize="lg" textAlign={"center"} href="/btcreserve">
+                BTC Reserve
+              </Link>
+              <Link fontSize="lg" href="/btcmarket">
+                Invest
+              </Link>
             </Menu>
 
             <Box pr={24} px={24}>

@@ -15,7 +15,7 @@ import {
 } from "@stacks/transactions";
 import { userSession } from "./ConnectWallet";
 
-// This is a React component that handles lending and borrowing of xBTC using the Stacks blockchain network and Connect API
+// This is a React component that handles lending and borrowing of sBTC using the Stacks blockchain network and Connect API
 const LendBorrow = (props) => {
   const [users, setUsers] = useState([]);
   const { doContractCall } = useConnect();
@@ -23,7 +23,7 @@ const LendBorrow = (props) => {
 
   function sendLoan() {
     let receiverAddress = window.prompt("Enter the receiver's address.");
-    let amount = window.prompt("Enter amount of xBTC you wanted to send.");
+    let amount = window.prompt("Enter amount of sBTC you wanted to send.");
     receiverAddress = standardPrincipalCV(receiverAddress);
     amount = intCV(amount);
 
@@ -58,10 +58,10 @@ const LendBorrow = (props) => {
     });
   }
 
-   // `takeLoan()` prompts the user for input and makes a contract call to withdraw xBTC from the specified address.
+   // `takeLoan()` prompts the user for input and makes a contract call to withdraw sBTC from the specified address.
   function takeLoan() {
     let Address = window.prompt("Enter the receiver's address");
-    let amount = window.prompt("Enter the amount of xBTC you want to withdraw.");
+    let amount = window.prompt("Enter the amount of sBTC you want to withdraw.");
     Address = standardPrincipalCV(Address);
     amount = intCV(amount);
 
@@ -108,7 +108,7 @@ const LendBorrow = (props) => {
     <>
       <Stack direction="row" spacing={4} align="center">
         <Button variant="outline" onClick={() => takeLoan("ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN", 1)}>
-          Withdraw
+          Withdraw Reserve
         </Button>
 
         <Button
@@ -117,7 +117,7 @@ const LendBorrow = (props) => {
             sendLoan("ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN", 1)
           }
         >
-          Deposit
+          Deposit Reserve
         </Button>
       </Stack>
       <br />

@@ -94,7 +94,7 @@ export default function Reserve() {
 
       <main className={styles.main}>
         <br />
-        <Text fontSize="4xl" fontWeight="semibold" color="#F2A900">
+        <Text fontSize="4xl" py={10} fontWeight="semibold" color="#F2A900">
           Welcome your Arcus Bitcoin Reserve.
         </Text>
         <Text fontSize="xl" fontWeight="" color="">
@@ -126,7 +126,7 @@ export default function Reserve() {
             <LendBorrow user={users} />
           </Stack>
         </Container>
-        <br /> <br />
+      
         <br />
         {/* TODO: pending Rewards display */}
         <br />
@@ -139,6 +139,14 @@ export default function Reserve() {
           alignItems="center"
         >
           <Container centerContent>
+          <Text
+              textAlign="center"
+              fontSize=""
+              fontWeight=""
+              color="#F2A900"
+            >
+              [testing only]
+            </Text>
             <Text
               textAlign="center"
               fontSize="xl"
@@ -175,7 +183,7 @@ export default function Reserve() {
             <br />
           </Container>
           <br />
-          <br /> <br />
+   
           <br />
           <Container centerContent>
             <Text
