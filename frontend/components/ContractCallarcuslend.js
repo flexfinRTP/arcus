@@ -43,11 +43,11 @@ const ContractCallarcuslend = () => {
       {/* <div>Token Balance = {tokenBalance}</div> */}
       <Container centerContent>
         <Button variant="ghost" onClick={() => getTokenBalance()}>
-          Get Balance
+         Arcus Contract Balance
           <br />
         </Button>{" "}
+        <div> {tokenBalance} xBTC</div>
       </Container>
-      <div>Contract Token Balance = {tokenBalance} xBTC</div>
     </div>
   );
 };

@@ -62,8 +62,9 @@ export default function Simple() {
             </Flex>
             <Menu>
               <Link href="/">Home</Link>
-              <Link href="/">About</Link>
-              <Link href="/btcreserve">The BTC Reserve</Link>
+              <Link href="/bridge">Bridge</Link>
+              <Link href="/btcreserve">BTC Reserve</Link>
+              <Link href="/btcmarket">Invest</Link>
             </Menu>
 
             <Box pr={24} px={24}>

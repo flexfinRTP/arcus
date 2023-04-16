@@ -34,7 +34,7 @@ import {
 } from "@stacks/transactions";
 import { userSession } from "../../components/ConnectWallet";
 
-export default function Reserve() {
+export default function Market() {
   const [users, setUsers] = useState([]);
   const { doContractCall } = useConnect();
 
@@ -94,10 +94,10 @@ export default function Reserve() {
       <main className={styles.main}>
         <br />
         <Text fontSize="4xl" fontWeight="semibold" color="#F2A900">
-          Welcome your Arcus Bitcoin Reserve.
+          Invest your Reserve BTC into your preferred trading strategy.
         </Text>
         <Text fontSize="2xl" fontWeight="" color="">
-          The Citadel awaits...
+          Put your BTC to work...
         </Text>
         {/* <br />
         <br />
@@ -106,22 +106,70 @@ export default function Reserve() {
         <br />
         <Container centerContent>
           <Text fontSize="3xl" fontWeight="bold" color="#F2A900">
-            BTC Reserve Dashboard
+            Vaults
           </Text>
           <br />
-          <Stack
-            direction={"row"}
-            spacing={72}
-            py={2}
-            px={8}
-            display="flex"
-            alignItems="center"
-          >
-            <ContractCallarcusbal />
-            <LendBorrow user={users} />
-          </Stack>
         </Container>
-        <br /> <br />
+        <Stack
+          direction={"row"}
+          spacing={24}
+          py={2}
+          px={16}
+          display="flex"
+          alignItems="center"
+        >
+                    <Container centerContent>
+            <Text
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="semibold"
+              color="#F2A900"
+            >
+              sABR Vault
+            </Text>
+            </Container>
+            <Container centerContent>
+            <Text
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="bold"
+              color="#F2A900"
+            >
+              108% APY
+            </Text>
+            </Container>
+          </Stack>
+          <br />
+        <br />
+        <Stack
+          direction={"row"}
+          spacing={24}
+          py={2}
+          px={16}
+          display="flex"
+          alignItems="center"
+        >
+                    <Container centerContent>
+            <Text
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="semibold"
+              color="#F2A900"
+            >
+              sBTC / sABR
+            </Text>
+            </Container>
+            <Container centerContent>
+            <Text
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="bold"
+              color="#F2A900"
+            >
+              23.7% APY
+            </Text>
+            </Container>
+          </Stack>
         <br />
         <br />
         <Stack
@@ -132,81 +180,59 @@ export default function Reserve() {
           display="flex"
           alignItems="center"
         >
-          <Container centerContent>
-            <Text
-              textAlign="center"
-              fontSize="xl"
-              fontWeight="semibold"
-              color="#F2A900"
-            >
-              Add an authorized user to the Arcus Bitcoin Reserve now!
-            </Text>
-
-            <br />
-            <br />
-            <Button
-              bg="#F2A900"
-              color="white"
-              colorScheme="orange"
-              variant="solid"
-              w="50%"
-              gap="4"
-              mb={4}
-              py={12}
-              fontSize="xl"
-              alignItems="center"
-              justifyContent="center"
-              display="flex"
-              mt="2"
-              boxShadow="dark-lg"
-              p="8"
-              rounded="xl"
-              onClick={() => addUser()}
-            >
-              Add User
-            </Button>
-            <br />
-            <br />
-          </Container>
-          <br />
-          <br /> <br />
-          <br />
-          <Container centerContent>
+                    <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
               fontWeight="semibold"
               color="#F2A900"
             >
-              Create your Bitcoin Reserve.
+              sBTC / sUSDT
             </Text>
-            <br />
-            <br />
-            <Button
-              bg="#F2A900"
-              color="white"
-              colorScheme="orange"
-              variant="solid"
-              w="50%"
-              gap="4"
-              mb={4}
-              py={12}
-              fontSize="xl"
-              alignItems="center"
-              justifyContent="center"
-              display="flex"
-              mt="2"
-              boxShadow="dark-lg"
-              p="8"
-              rounded="xl"
-              onClick={() => addUser()}
+            </Container>
+            <Container centerContent>
+            <Text
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="bold"
+              color="#F2A900"
             >
-              Create
-            </Button>
-            <br />
-            <br />
-          </Container>
-        </Stack>
+              4.7% APY
+            </Text>
+            </Container>
+          </Stack>
+          <br />
+        <br />
+        <Stack
+          direction={"row"}
+          spacing={24}
+          py={2}
+          px={16}
+          display="flex"
+          alignItems="center"
+        >
+                    <Container centerContent>
+            <Text
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="semibold"
+              color="#F2A900"
+            >
+              sBTC / ALEX
+            </Text>
+            </Container>
+            <Container centerContent>
+            <Text
+              textAlign="center"
+              fontSize="2xl"
+              fontWeight="bold"
+              color="#F2A900"
+            >
+              49.7% APY
+            </Text>
+            </Container>
+          </Stack>
+        <br />
       </main>
     </div>
   );

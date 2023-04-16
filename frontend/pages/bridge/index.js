@@ -1,13 +1,11 @@
 import Head from "next/head";
 import { useCallback, useEffect, useState } from "react";
-import ConnectWallet from "../components/ConnectWallet";
-import LendBorrow from "../components/LendBorrow";
-import styles from "../styles/Home.module.css";
-import ContractCallarcuslend from "../components/ContractCallarcuslend";
-import ContractCallarcusbal from "../components/ContractCallarcusbal";
+import ConnectWallet from "../../components/ConnectWallet";
+import LendBorrow from "../../components/LendBorrow";
+import styles from "../../styles/Home.module.css";
+import ContractCallarcuslend from "../../components/ContractCallarcuslend";
 import { useConnect } from "@stacks/connect-react";
-import { Button, ButtonGroup, Container, Stack, Text } from "@chakra-ui/react";
-import { useRouter } from "next/router";
+import { Button, ButtonGroup, Container, Link, Text } from "@chakra-ui/react";
 
 import { StacksTestnet } from "@stacks/network";
 
@@ -18,10 +16,9 @@ import {
   makeStandardSTXPostCondition,
   FungibleConditionCode,
 } from "@stacks/transactions";
-import { userSession } from "../components/ConnectWallet";
+import { userSession } from "../../components/ConnectWallet";
 
-export default function Home() {
-  const router = useRouter();
+export default function Bridge() {
   const [users, setUsers] = useState([]);
   const { doContractCall } = useConnect();
 
@@ -79,41 +76,32 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
- 
-        <br />
-        <Text fontSize="4xl" fontWeight="extrabold" color="#F2A900">
-          Welcome to Arcus.
-        </Text>
+    
+      
         <Text fontSize="xl" fontWeight="semibold" color="">
-          Unlock the full potential of your BTC holdings with our dynamic
-          investment platform.
+          Ready to go? Put your BTC to work <span><Link href="/btcreserve" fontWeight="extrabold" color="#F2A900">now!</Link></span>
+        </Text>
+        
+        <br />       <br />
+        <br />
+        <br />
+        <Text fontSize="4xl" fontWeight="bold" color="">
+          Bridge from BTC to sBTC
         </Text>
         <br />
         <br />
-        <Stack
-          direction={"row"}
-          spacing={24}
-          py={2}
-          px={16}
-          display="flex"
-          alignItems="center"
-        >
-                  <ContractCallarcuslend />
-        <br /> <br />
-        <ContractCallarcusbal />
+        <Text fontSize="3xl" fontWeight="bold" color="#F2A900">
+          Unlock your Bitcoin to unexplored profit.
+        </Text>
         <br />
-        <br />
-          </Stack>
-
         <br />
         <Container centerContent>
           <Text fontSize="2xl" fontWeight="semibold" color="#F2A900">
-            Join the Citadel now.
-            <br />
+            Use the ALEX Bridge Now
           </Text>
 
           <br />
-       
+          <br />
           <Button
             bg="#F2A900"
             color="white"
@@ -131,10 +119,7 @@ export default function Home() {
             boxShadow="dark-lg"
             p="8"
             rounded="xl"
-            onClick={() => router.push("/btcreserve")}
-          >
-            Join
-          </Button>
+          >Bridge</Button>
           <br />
           <br />
         </Container>

@@ -1,4 +1,4 @@
-;;Smart Contract that helps the person to person money lending process easy. 
+;; Send Loan to Bitcoin Reserve, Withdraw from Bitcoin Reserve
 
 
 ;; constants
@@ -46,9 +46,9 @@
 )
 
 ;; THis function will help to read the user balance
-(define-read-only (get-user-balance (address principal)) 
-  (map-get? user-balance address) 
-)
+(define-public (get-user-balance (address principal))
+  (ok (stx-get-balance address)))
+
 ;;This function will return the total token balance
 (define-read-only (get-token-balance)
   (var-get bridge-money)
