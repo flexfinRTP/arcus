@@ -24,23 +24,6 @@ import ConnectWallet from "../components/ConnectWallet";
 import { useRouter } from "next/router";
 import Arcus from "../public/Arcus_logo.png";
 
-const Links = ["Home", "Lend/Borrow", "Team", "Docs"];
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: useColorModeValue("gray.200", "gray.700"),
-    }}
-    href={"#"}
-  >
-    {children}
-  </Link>
-);
-
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const router = useRouter();
@@ -76,6 +59,9 @@ export default function Simple() {
               </Link>
               <Link fontSize="lg" href="/btcmarket">
                 Invest
+              </Link>
+              <Link fontSize="lg" href="/faucet">
+                Faucet
               </Link>
             </Menu>
 

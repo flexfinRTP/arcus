@@ -112,6 +112,10 @@ export default function Reserve() {
           <Text fontSize="3xl" fontWeight="bold" color="#F2A900">
             BTC Reserve Dashboard
           </Text>
+          {/* TODO: populate btc reserve add once created. */}
+          <Text fontSize="md" fontWeight="semibold" color="">
+            BTC Reserve Address: 
+          </Text>
           <br />
           <ContractCallarcusrewards />
           <Stack

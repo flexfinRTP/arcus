@@ -12,6 +12,10 @@ epoch = 2.0
 [repl.analysis]
 passes = ['check_checker']
 
+[contracts.arcus-lendv2]
+path = "contracts/arcus-lendv2.clar"
+depends_on = []
+
 [repl.analysis.check_checker]
 strict = false
 trusted_sender = false
