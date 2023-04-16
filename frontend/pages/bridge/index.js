@@ -85,19 +85,27 @@ export default function Bridge() {
         <br />       <br />
         <br />
         <br />
-        <Text fontSize="4xl" fontWeight="bold" color="">
-          Bridge from BTC to sBTC
-        </Text>
-        <br />
-        <br />
         <Text fontSize="3xl" fontWeight="bold" color="#F2A900">
           Unlock your Bitcoin to unexplored profit.
         </Text>
         <br />
         <br />
+        <Text fontSize="4xl" fontWeight="bold" color="">
+          Available Now! Bridge from USDT to sUSDT
+        </Text>
+        <br />
+        <Text fontSize="2xl" fontWeight="bold" color="#828282">
+          Future: Bridge from BTC to sBTC
+        </Text>
+        <br /><br />
+        <br />
+        <br />
         <Container centerContent>
           <Text fontSize="2xl" fontWeight="semibold" color="#F2A900">
             Use the ALEX Bridge Now
+          </Text>
+          <Text fontSize="" fontWeight="semibold" color="#828282">
+            testnet whitelist only...
           </Text>
 
           <br />

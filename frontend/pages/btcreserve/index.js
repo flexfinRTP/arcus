@@ -5,6 +5,7 @@ import LendBorrow from "../../components/LendBorrow";
 import styles from "../../styles/Home.module.css";
 import ContractCallarcuslend from "../../components/ContractCallarcuslend";
 import ContractCallarcusbal from "../../components/ContractCallarcusbal";
+import ContractCallarcusrewards from "../../components/ContractCallarcusrewards";
 import { useConnect } from "@stacks/connect-react";
 import {
   Button,
@@ -96,7 +97,10 @@ export default function Reserve() {
         <Text fontSize="4xl" fontWeight="semibold" color="#F2A900">
           Welcome your Arcus Bitcoin Reserve.
         </Text>
-        <Text fontSize="2xl" fontWeight="" color="">
+        <Text fontSize="xl" fontWeight="" color="">
+          Create your reserve wallet, and gain access to exclusive Bitcoin DeFi.
+        </Text>
+        <Text fontSize="2xl" fontWeight="semibold" color="">
           The Citadel awaits...
         </Text>
         {/* <br />
@@ -109,6 +113,7 @@ export default function Reserve() {
             BTC Reserve Dashboard
           </Text>
           <br />
+          <ContractCallarcusrewards />
           <Stack
             direction={"row"}
             spacing={72}
@@ -123,6 +128,7 @@ export default function Reserve() {
         </Container>
         <br /> <br />
         <br />
+        {/* TODO: pending Rewards display */}
         <br />
         <Stack
           direction={"row"}

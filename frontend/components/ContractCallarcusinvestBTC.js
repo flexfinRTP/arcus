@@ -1,3 +1,5 @@
+// TODO: invest in strats; ABR vault, sbtc/sabr, sbtc/susdt, sbtc/alex
+
 import React from "react";
 import { useCallback, useEffect, useState } from "react";
 import { useConnect } from "@stacks/connect-react";
@@ -16,14 +18,14 @@ import {
 import { userSession } from "./ConnectWallet";
 
 // This is a React component that handles lending and borrowing of xBTC using the Stacks blockchain network and Connect API
-const LendBorrow = (props) => {
+const ArcusInvestBTC = (props) => {
   const [users, setUsers] = useState([]);
   const { doContractCall } = useConnect();
   let newArray = props.user;
 
   function sendLoan() {
     let receiverAddress = window.prompt("Enter the receiver's address.");
-    let amount = window.prompt("Enter amount of xBTC you wanted to send.");
+    let amount = window.prompt("Enter amount of $BTC you wanted to send.");
     receiverAddress = standardPrincipalCV(receiverAddress);
     amount = intCV(amount);
 
@@ -35,8 +37,8 @@ const LendBorrow = (props) => {
       network: new StacksTestnet(),
       anchorMode: AnchorMode.Any,
       contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-      contractName: "arcus-lend",
-      functionName: "send-loan",
+      contractName: "arcus-vaults",
+      functionName: "deposit-vault-btc",
       functionArgs: [receiverAddress, amount],
       postConditions: [
         makeStandardSTXPostCondition(
@@ -58,10 +60,9 @@ const LendBorrow = (props) => {
     });
   }
 
-   // `takeLoan()` prompts the user for input and makes a contract call to withdraw xBTC from the specified address.
   function takeLoan() {
     let Address = window.prompt("Enter the receiver's address");
-    let amount = window.prompt("Enter the amount of xBTC you want to withdraw.");
+    let amount = window.prompt("Enter the amount of $BTC you want to withdraw.");
     Address = standardPrincipalCV(Address);
     amount = intCV(amount);
 
@@ -73,8 +74,8 @@ const LendBorrow = (props) => {
       network: new StacksTestnet(),
       anchorMode: AnchorMode.Any,
       contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-      contractName: "arcus-lend",
-      functionName: "take-loan",
+      contractName: "arcus-vaults",
+      functionName: "withdraw-vault-btc",
       functionArgs: [Address, amount],
       postConditions: [
         makeStandardSTXPostCondition(
@@ -107,14 +108,14 @@ const LendBorrow = (props) => {
   return (
     <>
       <Stack direction="row" spacing={4} align="center">
-        <Button variant="outline" onClick={() => takeLoan("ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN", 1)}>
+        <Button variant="outline" onClick={() => withdrawVaultBTC("ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN", 1)}>
           Withdraw
         </Button>
 
         <Button
           variant="outline"
           onClick={() =>
-            sendLoan("ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN", 1)
+            depositVaultBTC("ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN", 1)
           }
         >
           Deposit
@@ -122,9 +123,9 @@ const LendBorrow = (props) => {
       </Stack>
       <br />
       <br />
-      {renderList()}
+      {/* {renderList()} */}
     </>
   );
 };
 
-export default LendBorrow;
+export default ArcusInvestBTC;

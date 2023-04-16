@@ -79,17 +79,26 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
- 
         <br />
         <Text fontSize="4xl" fontWeight="extrabold" color="#F2A900">
           Welcome to Arcus.
         </Text>
         <Text fontSize="xl" fontWeight="semibold" color="">
-          Unlock the full potential of your BTC holdings with our dynamic
-          investment platform.
+          Unlock the full potential of your{" "}
+          <Text as="span"  fontWeight="bold" color="#F2A900">
+            BTC
+          </Text>{" "}
+          holdings with our dynamic investment platform.
         </Text>
         <br />
-        <br />
+        <Text fontSize="xl" fontWeight="semibold" color="">
+          Earn{" "}
+          <Text as="span" fontWeight="bold" font color="#F2A900">
+            DAILY
+          </Text>{" "}
+          rewards in BTC
+        </Text>
+        <br /> <br /> <br />
         <Stack
           direction={"row"}
           spacing={24}
@@ -98,14 +107,13 @@ export default function Home() {
           display="flex"
           alignItems="center"
         >
-                  <ContractCallarcuslend />
+          <ContractCallarcuslend />
+          <br /> <br />
+          <ContractCallarcusbal />
+          <br />
+          <br />
+        </Stack>
         <br /> <br />
-        <ContractCallarcusbal />
-        <br />
-        <br />
-          </Stack>
-
-        <br />
         <Container centerContent>
           <Text fontSize="2xl" fontWeight="semibold" color="#F2A900">
             Join the Citadel now.
@@ -113,7 +121,7 @@ export default function Home() {
           </Text>
 
           <br />
-       
+
           <Button
             bg="#F2A900"
             color="white"

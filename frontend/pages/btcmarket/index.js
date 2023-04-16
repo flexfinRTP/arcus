@@ -5,6 +5,10 @@ import LendBorrow from "../../components/LendBorrow";
 import styles from "../../styles/Home.module.css";
 import ContractCallarcuslend from "../../components/ContractCallarcuslend";
 import ContractCallarcusbal from "../../components/ContractCallarcusbal";
+import ContractCallarcusinvestABR from "../../components/ContractCallarcusinvestABR";
+import ContractCallarcusinvestBTC from "../../components/ContractCallarcusinvestBTC";
+import ContractCallarcusinvestUSDT from "../../components/ContractCallarcusinvestUSDT";
+import ContractCallarcusinvestALEX from "../../components/ContractCallarcusinvestALEX";
 import { useConnect } from "@stacks/connect-react";
 import {
   Button,
@@ -118,7 +122,7 @@ export default function Market() {
           display="flex"
           alignItems="center"
         >
-                    <Container centerContent>
+          <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
@@ -127,8 +131,8 @@ export default function Market() {
             >
               sABR Vault
             </Text>
-            </Container>
-            <Container centerContent>
+          </Container>
+          <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
@@ -137,9 +141,10 @@ export default function Market() {
             >
               108% APY
             </Text>
-            </Container>
-          </Stack>
-          <br />
+          </Container>
+          <ContractCallarcusinvestABR />
+        </Stack>
+        <br />
         <br />
         <Stack
           direction={"row"}
@@ -149,7 +154,7 @@ export default function Market() {
           display="flex"
           alignItems="center"
         >
-                    <Container centerContent>
+          <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
@@ -158,8 +163,8 @@ export default function Market() {
             >
               sBTC / sABR
             </Text>
-            </Container>
-            <Container centerContent>
+          </Container>
+          <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
@@ -168,8 +173,10 @@ export default function Market() {
             >
               23.7% APY
             </Text>
-            </Container>
-          </Stack>
+          </Container>
+          <ContractCallarcusinvestBTC />
+        </Stack>
+
         <br />
         <br />
         <Stack
@@ -180,7 +187,7 @@ export default function Market() {
           display="flex"
           alignItems="center"
         >
-                    <Container centerContent>
+          <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
@@ -189,8 +196,8 @@ export default function Market() {
             >
               sBTC / sUSDT
             </Text>
-            </Container>
-            <Container centerContent>
+          </Container>
+          <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
@@ -199,9 +206,10 @@ export default function Market() {
             >
               4.7% APY
             </Text>
-            </Container>
-          </Stack>
-          <br />
+          </Container>
+          <ContractCallarcusinvestUSDT />
+        </Stack>
+        <br />
         <br />
         <Stack
           direction={"row"}
@@ -211,7 +219,7 @@ export default function Market() {
           display="flex"
           alignItems="center"
         >
-                    <Container centerContent>
+          <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
@@ -220,8 +228,8 @@ export default function Market() {
             >
               sBTC / ALEX
             </Text>
-            </Container>
-            <Container centerContent>
+          </Container>
+          <Container centerContent>
             <Text
               textAlign="center"
               fontSize="2xl"
@@ -230,8 +238,9 @@ export default function Market() {
             >
               49.7% APY
             </Text>
-            </Container>
-          </Stack>
+          </Container>
+          <ContractCallarcusinvestALEX />
+        </Stack>
         <br />
       </main>
     </div>
