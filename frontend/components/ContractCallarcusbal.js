@@ -23,7 +23,7 @@ const ContractCallarcusbal = () => {
       const userAddress = userSession.loadUserData().profile.stxAddress.testnet;
       const options = {
         contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-        contractName: "arcus-lend",
+        contractName: "arcus-lendv01",
         functionName: "get-user-balance",
         network: new StacksTestnet(),
         functionArgs: [],
@@ -41,7 +41,7 @@ const ContractCallarcusbal = () => {
       const userAddress = userSession.loadUserData().profile.stxAddress.testnet;
       const options = {
         contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-        contractName: "arcus-lend",
+        contractName: "arcus-lendv01",
         functionName: "get-reserve-balance",
         network: new StacksTestnet(),
         functionArgs: [],
@@ -66,14 +66,16 @@ const ContractCallarcusbal = () => {
            Wallet Balance
           <br />
         </Button>{" "}
-        <Text>{userBalance} xBTC</Text>
+        <Text>{userBalance} sBTC</Text>
+        <div> {userBalance} ABR</div>
       </Container>
       <Container centerContent>
         <Button variant="ghost" onClick={() => getReserveBalance()}>
           Reserve Balance
           <br />
         </Button>{" "}
-        <Text>{reserveBalance} xBTC</Text>
+        <Text>{reserveBalance} sBTC</Text>
+        <div> {reserveBalance} ABR</div>
       </Container>
     </div>
   );

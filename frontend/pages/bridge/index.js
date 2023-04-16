@@ -32,7 +32,7 @@ export default function Bridge() {
       network: new StacksTestnet(),
       anchorMode: AnchorMode.Any,
       contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-      contractName: "arcus-lend",
+      contractName: "arcus-lendv01",
       functionName: "add-demo-user",
       functionArgs: [userAdd],
       postConditions: [

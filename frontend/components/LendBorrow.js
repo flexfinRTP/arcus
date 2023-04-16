@@ -35,7 +35,7 @@ const LendBorrow = (props) => {
       network: new StacksTestnet(),
       anchorMode: AnchorMode.Any,
       contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-      contractName: "arcus-lend",
+      contractName: "arcus-lendv01",
       functionName: "send-loan",
       functionArgs: [receiverAddress, amount],
       postConditions: [
@@ -73,7 +73,7 @@ const LendBorrow = (props) => {
       network: new StacksTestnet(),
       anchorMode: AnchorMode.Any,
       contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-      contractName: "arcus-lend",
+      contractName: "arcus-lendv01",
       functionName: "take-loan",
       functionArgs: [Address, amount],
       postConditions: [

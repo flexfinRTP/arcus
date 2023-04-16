@@ -48,7 +48,8 @@ const ContractCallarcusrewards = () => {
          Pending BTC Rewards
           <br />
         </Button>{" "}
-        <div> {rewardsBalance} xBTC</div>
+        <div> {rewardsBalance} sBTC</div>
+        <div> {rewardsBalance} ABR</div>
       </Container>
     </div>
   );

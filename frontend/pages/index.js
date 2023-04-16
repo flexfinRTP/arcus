@@ -43,7 +43,7 @@ export default function Home() {
       network: new StacksTestnet(),
       anchorMode: AnchorMode.Any,
       contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-      contractName: "arcus-lend",
+      contractName: "arcus-lendv01",
       functionName: "add-demo-user",
       functionArgs: [userAdd],
       postConditions: [
@@ -93,11 +93,10 @@ export default function Home() {
         </Text>
         {/* <Image src={Arcus} alt="logo" width={200} height={200} /> */}
         <Text fontSize="xl" fontWeight="semibold" color="">
-          Unlock the full potential of your{" "}
+        Create your reserve wallet, and gain access to exclusive  {" "}
           <Text as="span" fontWeight="bold" color="#F2A900">
-            BTC
+            Bitcoin DeFi.
           </Text>{" "}
-          holdings with our dynamic investment platform.
         </Text>
         <br />
         <Text fontSize="xl" fontWeight="semibold" color="">
@@ -107,7 +106,7 @@ export default function Home() {
           </Text>{" "}
           rewards in BTC!
         </Text>
-        <br /> <br /> 
+  
         <Stack
           direction={"row"}
           spacing={24}
@@ -116,16 +115,16 @@ export default function Home() {
           display="flex"
           alignItems="center"
         >
-          <ContractCallarcuslend />
-          <br /> <br />
-          <ContractCallarcusbal />
-          <br />
+
+
+  
+       
           <br />
         </Stack>
         <br /> <br />
         <Container centerContent>
           <Text fontSize="2xl" fontWeight="semibold" color="#F2A900">
-            Join the Citadel now.
+            Join the BTC DeFi Party Now!
             <br />
           </Text>
 

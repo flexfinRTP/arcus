@@ -52,7 +52,7 @@ export default function Market() {
       network: new StacksTestnet(),
       anchorMode: AnchorMode.Any,
       contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-      contractName: "arcus-lend",
+      contractName: "arcus-lendv01",
       functionName: "add-demo-user",
       functionArgs: [userAdd],
       postConditions: [
@@ -143,6 +143,9 @@ export default function Market() {
               108% APY
             </Text>
           </Container>
+          <Text>
+          Balance:
+          </Text>
           <ContractCallarcusinvestABR />
         </Stack>
         <br />
@@ -176,6 +179,9 @@ export default function Market() {
               23.7% APY
             </Text>
           </Container>
+          <Text>
+            Balance:
+          </Text>
           <ContractCallarcusinvestBTC />
         </Stack>
 
@@ -210,6 +216,9 @@ export default function Market() {
               4.7% APY
             </Text>
           </Container>
+          <Text>
+            Balance:
+          </Text>
           <ContractCallarcusinvestUSDT />
         </Stack>
         <br />
@@ -243,6 +252,9 @@ export default function Market() {
               49.7% APY
             </Text>
           </Container>
+          <Text>
+            Balance:
+          </Text>
           <ContractCallarcusinvestALEX />
         </Stack>
         <br />

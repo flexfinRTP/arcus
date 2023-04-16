@@ -1,17 +1,17 @@
-import { useState } from 'react';
-import { Button } from '@chakra-ui/react';
-import { useConnect } from '@stacks/connect-react';
+import { useState } from "react";
+import { Button, Container } from "@chakra-ui/react";
+import { useConnect } from "@stacks/connect-react";
 import {
   StacksTestnet,
   makeStandardSTXPostCondition,
   FungibleConditionCode,
   doContractCall,
-} from '@stacks/transactions';
+} from "@stacks/transactions";
 
 // Update faucetContractAddress with the actual address of the faucet contract
-const faucetContractAddress = 'ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN';
+const faucetContractAddress = "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN";
 // Update contractName with the actual name of the faucet contract
-const contractName = 'arcus-faucet';
+const contractName = "arcus-faucet";
 // Update network with the actual network to use for the transaction
 // const network = new StacksTestnet();
 
@@ -32,7 +32,7 @@ function FaucetPage() {
         network: new StacksTestnet(),
         contractAddress: faucetContractAddress,
         contractName,
-        functionName: 'withdraw',
+        functionName: "withdraw",
         functionArgs: [],
         network,
         postConditions: [
@@ -43,14 +43,14 @@ function FaucetPage() {
           ),
         ],
         onFinish: (data) => {
-          console.log('onFinish:', data);
+          console.log("onFinish:", data);
           console.log(
-            'Explorer:',
+            "Explorer:",
             `localhost:8000/txid/${data.txId}?chain=testnet`
           );
         },
         onCancel: () => {
-          console.log('onCancel:', 'Transaction was canceled');
+          console.log("onCancel:", "Transaction was canceled");
         },
       });
     } catch (error) {
@@ -61,9 +61,17 @@ function FaucetPage() {
   };
 
   return (
-    <Button isLoading={isWithdrawing} onClick={handleWithdrawClick}>
-      Withdraw 10 ABR from Faucet
-    </Button>
+    <>
+    <Container centerContent>
+    <br /><br /><br /><br /><br /><br />
+      <Button isLoading={isWithdrawing} onClick={handleWithdrawClick}>
+        Withdraw 10 ABR from Faucet
+      </Button>
+      <br /><br />
+      <br />
+      <Button>Withdraw 10 STX from Faucet</Button>
+      </Container>
+    </>
   );
 }
 

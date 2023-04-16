@@ -49,7 +49,7 @@ export default function Reserve() {
       network: new StacksTestnet(),
       anchorMode: AnchorMode.Any,
       contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-      contractName: "arcus-lend",
+      contractName: "arcus-lendv01",
       functionName: "add-demo-user",
       functionArgs: [userAdd],
       postConditions: [
@@ -100,9 +100,9 @@ export default function Reserve() {
         <Text fontSize="xl" fontWeight="" color="">
           Create your reserve wallet, and gain access to exclusive Bitcoin DeFi.
         </Text>
-        <Text fontSize="2xl" fontWeight="semibold" color="">
+        {/* <Text fontSize="2xl" fontWeight="semibold" color="">
           The Citadel awaits...
-        </Text>
+        </Text> */}
         {/* <br />
         <br />
         <ContractCallarcuslend /> */}

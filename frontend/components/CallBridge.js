@@ -15,7 +15,7 @@ const CallBridge = () => {
       // get user address from Stacks Connect
       const userSession = await doContractCall({
         contractAddress: "ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN",
-        contractName: "arcus-lend",
+        contractName: "arcus-lendv01",
         functionName: "get-user-address",
         functionArgs: [],
         network: new StacksTestnet(),

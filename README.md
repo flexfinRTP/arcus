@@ -21,3 +21,7 @@ Get exlusive access now: [link]
 - Clarity, Clarinet
 -
 - 
+
+## Tech Notes
+- Arcus Lend Contract - Testnet
+- https://explorer.hiro.so/sandbox/contract-call/ST39KDG85WZ340RAGGFY4FN3JMKYMEC1AEQHRM7TN.arcus-lendv01?chain=testnet

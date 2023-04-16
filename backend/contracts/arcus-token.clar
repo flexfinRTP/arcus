@@ -1,8 +1,8 @@
 ;; SIP-009 Arcus Token Contract
 
 ;; Constants
-(define (decimals) 6)  ; 6 decimal places
-(define (name) "Arcus Token") ; Token Name
+(define (decimals) 6)  ;; 6 decimal places
+(define (name) "Arcus Token") ;; Token Name
 (define (symbol) "ABR") ; Token Symbol
 (define (total-supply) 1000000000) ; Total Token Supply
 
